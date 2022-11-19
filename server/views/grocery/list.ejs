@@ -1,0 +1,52 @@
+<%- include ('../partials/header.ejs'); %>
+<%- include ('../partials/main_nav.ejs'); %>
+ 
+<main>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3" >
+            <h1><%= title %></h1>
+            <br>
+             <a href="/grocery-list/add" class="btn btn-primary" role="button">
+        <i class="fas fa-plus-circle"></i> Add an item</a>
+            <br>
+            <br>
+    <table class= "table table-bordered table-striped table-hover">
+    <tr>
+        <th class="text-center">Category</th>
+        <th class="text-center">Item</th>
+        <th class="text-center">Quantity</th>
+        <th class="text-center col-md-2">Price per item (CAD)</th>
+        <th class="text-center"></th>
+        <th class="text-center"></th>
+    </tr>
+    <br>
+
+    <% for(let count=0; count<Grocerylist.length; count++) { %>
+        <tr>
+            <td class="text-center"><%= Grocerylist[count].category %></td>
+            <td class="text-center"><%= Grocerylist[count].item %></td>
+            <td class="text-center"><%= Grocerylist[count].quantity %></td>
+            <td class="text-center"><%= Grocerylist[count].price %></td>
+            <td class="text-center">
+                <a href="/grocery-list/edit/<%= Grocerylist[count]._id %>"
+                    class="btn btn-primary">
+                    <i class="fas fa-pencil-alt"></i> Edit </a>
+            </td>
+            
+            <td class="text-center">
+            <a href="/grocery-list/delete/<%= Grocerylist[count]._id %>" 
+                        class="btn btn-danger">
+                        <i class="fas fa-trash-alt"></i> Delete </a>
+                </td>    
+        </tr>
+    <% } %>
+    </table>
+
+</div>
+</div>
+</div>
+</main>
+
+<%- include ('../partials/bottom_nav.ejs'); %>
+<%- include ('../partials/footer.ejs'); %>

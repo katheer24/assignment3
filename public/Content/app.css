@@ -1,0 +1,93 @@
+/*CSS3*/ 
+@charset "UTF-8"; 
+
+html
+{
+    background-color: antiquewhite;
+    background-image: url("/Assets/media/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+body
+{
+    background-color: transparent;
+}
+
+div.row
+{
+    background-color: rgba(250, 193, 143, 0.727);
+    padding: 10px;
+    font-family: Verdana, sans-serif;
+    border-style: solid;
+    border-color: #000000;
+}
+
+div.text-center h6
+{
+    color:white; 
+    font-size:18px;
+}
+
+main
+{
+    text-align: center;
+}
+
+nav
+{
+    text-align: center;
+    transition: transform 0.1s ease-in-out;
+    background-color: transparent;
+    padding-bottom: 3%;
+}
+
+nav img:hover{
+    
+    transform: scale(1.1);
+}
+
+#bottom_nav h6
+{ 
+    margin-left:6px;
+    margin-right:6px;
+}
+
+.listButton {
+    background-color: #ffba889f;
+    border: 0 solid #E5E7EB;
+    box-sizing: border-box;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-weight: 700;
+    justify-content: center;
+    width: 460px;
+    transform: rotate(-2deg);
+    margin-top: 25%;
+    
+  }
+  
+  .listButton:focus {
+    outline: 0;
+  }
+  
+  .listButton:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #000000;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+  }
+  
+  .listButton:hover:after {
+    bottom: 2px;
+    left: 2px;
+  }
+  
+  @media (min-width: 768px) { 
+    .listButton {
+      padding: .75rem 3rem;
+      font-size: 1.25rem;
+    }
+  }

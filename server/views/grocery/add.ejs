@@ -1,0 +1,64 @@
+<%- include ('../partials/header.ejs'); %>
+<%- include ('../partials/main_nav.ejs'); %>
+
+<main>
+<div class="container">
+    <div class="row">
+    <div class="col-md-offset-3 col-md-6">
+            <h1><%= title %></h1>
+            <form class="form" method="post">
+            <br>
+
+                <div class="form-group">
+                    <label for="">Category</label>
+                    <input type="text" class="form-control"
+                    id="categoryTextField"
+                    placeholder="Enter the category of the item"
+                    name="category" required>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label for="">Item</label>
+                    <input type="text" class="form-control"
+                    id="itemTextField"
+                    placeholder="Enter the grocery item"
+                    name="item" required>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label for="">Quantity</label>
+                    <input type="number" class="form-control"
+                    id="quantityTextField"
+                    placeholder="Enter the quantity of item"
+                    name="quantity" required>
+                </div>
+
+                <br>
+
+                 <div class="form-group">
+                    <label for="">Price per item (CAD)</label>
+                    <input type="number" class="form-control"
+                    id="priceTextField"
+                    placeholder="Enter the price of item"
+                    name="price" required>
+                </div>
+
+                <br>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit
+                </button>
+
+                <a href="/grocery-list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel</a>
+                </form>
+    </div>
+    </div>
+    </main>
+
+<%- include ('../partials/bottom_nav.ejs'); %>
+<%- include ('../partials/footer.ejs'); %>
